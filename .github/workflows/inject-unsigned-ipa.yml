@@ -17,6 +17,9 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v4
 
+      - name: Build AirliftFFI XCFramework
+        run: bash filza_base/AirliftFFI/build-ios-device.sh
+
       - name: Build iOS app without code signing
         shell: bash
         run: |
